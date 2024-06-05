@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-const path_1 = __importDefault(require("path"));
 const route_login_register_1 = require("./3_Routes/route.login.register");
 const route_AddVideoProfile_1 = require("./3_Routes/route.AddVideoProfile");
 const route_GetVideoProfile_1 = require("./3_Routes/route.GetVideoProfile");
@@ -16,12 +15,10 @@ const route_GetAllProfilesforUser_1 = require("./3_Routes/route.GetAllProfilesfo
 const app = (0, express_1.default)();
 const PORT = 3000;
 // CORS Configuration
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)()); // Allow requests from all origins
 // Middleware
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use(express_1.default.json());
-// Serve static files from the React app
-app.use(express_1.default.static(path_1.default.join(__dirname, '../frontend/build')));
 // Routers
 app.use('/api', route_login_register_1.router_login_register);
 app.use('/api', route_AddVideoProfile_1.router_add_video_profile);
