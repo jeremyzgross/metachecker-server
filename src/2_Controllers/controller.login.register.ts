@@ -21,7 +21,7 @@ export const registerUser = async(req: Request, res: Response, next: NextFunctio
 export const loginUser = async(req: Request, res: Response, next: NextFunction)=>{
   try{
     const userLogin = req.body
-    console.log(userLogin);
+    // console.log(userLogin);
     
     const result = await _loginUser(userLogin)
     const first_name :string = result.user.first_name
