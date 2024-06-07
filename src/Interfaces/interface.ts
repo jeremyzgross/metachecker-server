@@ -3,7 +3,7 @@ export interface VideoProfileMetadata {
     user_id: number; // NEED TO GET THIS FROM SESSION DATA LATER!!!
     profile_name: string;
     codec_name?: string;
-    profile?: string;
+    // profile?: string;
     width?: number;
     height?: number;
     field_order?: string;
@@ -62,7 +62,7 @@ export interface ResJSON {
 
 export interface videoProfileInterface {
   codec_name: string;
-  profile: string;
+  // profile: string;
   width: number;
   height: number;
   field_order: string;
