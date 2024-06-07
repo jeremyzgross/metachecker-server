@@ -45,7 +45,7 @@ export const UploadVideo = async (req: Request, res: Response, next: NextFunctio
 const checkVideo = async (user_id: number, profile_id: number): Promise<videoProfileInterface | null> => {
   try {
     const profileToUse = await db('video_metadata')
-      .select('codec_name', 'profile', 'width', 'height', 'field_order', 'r_frame_rate', 'duration', 'bitrate', 'audio_codec_name', 'sample_rate', 'channels', 'channel_layout', 'audio_bitrate')
+      .select('codec_name', 'width', 'height', 'field_order', 'r_frame_rate', 'duration', 'bitrate', 'audio_codec_name', 'sample_rate', 'channels', 'channel_layout', 'audio_bitrate')
       .where({ user_id, id: profile_id })
       .first();
 
