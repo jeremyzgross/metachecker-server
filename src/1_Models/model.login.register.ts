@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt'
-// import { Transaction } from 'knex';
+
 import { db } from '../0_Config/config.js';
 
 import { userData, User, userLogin } from '../Interfaces/interface.js';

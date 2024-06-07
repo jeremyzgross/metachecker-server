@@ -17,7 +17,7 @@ export const _addVideoProfile = async (VideoProfileMetadata: VideoProfileMetadat
         user_id: VideoProfileMetadata.user_id,
         profile_name: VideoProfileMetadata.profile_name,
         codec_name: VideoProfileMetadata.codec_name,
-        profile: VideoProfileMetadata.profile,
+        // profile: VideoProfileMetadata.profile,
         width: VideoProfileMetadata.width,
         height: VideoProfileMetadata.height,
         field_order: VideoProfileMetadata.field_order,
